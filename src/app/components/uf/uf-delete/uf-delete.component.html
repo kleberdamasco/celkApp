@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>Excluir Unidade Federativa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="uf.name" disabled
+                   name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Iniciais" disabled
+                   [value]="uf.initials"
+                   name="initials">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data criação"
+                   [ngModel]="uf.created | date:'dd/MM/yyyy HH:mm:ss'"
+                   (ngModelChange)="uf.created=$event"
+                   disabled name="created">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="delete()" color="warn">
+        Excluir
+    </button>
+    <button mat-raised-button (click)="back()">
+        Voltar
+    </button>
+</mat-card>

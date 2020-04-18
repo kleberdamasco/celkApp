@@ -15,11 +15,12 @@ export class UfService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(msg : string) : void {
+  showMessage(msg : string, isError : boolean = false) : void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     })
   }
 
@@ -27,8 +28,20 @@ export class UfService {
     return this.http.post<Uf>(`${this.baseURL}/create`, uf);
   }
 
-  readList() : Observable<Uf[]> {
+  readAll() : Observable<Uf[]> {
     return this.http.get<Uf[]>(`${this.baseURL}/all`);
+  }
+
+  readById(id : string) : Observable<Uf> {
+    return this.http.get<Uf>(`${this.baseURL}/id/${id}`)
+  }
+
+  update(uf : Uf) : Observable<Uf> {
+    return this.http.put<Uf>(`${this.baseURL}/update/`, uf)
+  }
+
+  delete(id : string) : Observable<Uf> {
+    return this.http.delete<Uf>(`${this.baseURL}/delete/${id}`);
   }
 
 }

@@ -22,10 +22,11 @@ import {FormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { UfReadComponent } from './components/uf/uf-read/uf-read.component';
-import { UfTableAngularComponent } from './components/uf/uf-table-angular/uf-table-angular.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UfUpdateComponent } from './components/uf/uf-update/uf-update.component';
+import { UfDeleteComponent } from './components/uf/uf-delete/uf-delete.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { MatSortModule } from '@angular/material/sort';
     UfCrudComponent,
     UfCreateComponent,
     UfReadComponent,
-    UfTableAngularComponent
+    UfUpdateComponent,
+    UfDeleteComponent
   ],
   imports: [
     BrowserModule,

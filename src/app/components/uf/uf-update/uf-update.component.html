@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>Alterar Unidade Federativa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="ufEdit.name"
+                   name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Iniciais"
+                   maxlength="2" [(ngModel)]="ufEdit.initials"
+                   name="initials">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data criação"
+                   [ngModel]="ufEdit.created | date:'dd/MM/yyyy HH:mm:ss'"
+                   (ngModelChange)="ufEdit.created=$event"
+                   readonly name="created">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateUf()" color="primary">
+        Atualizar
+    </button>
+    <button mat-raised-button (click)="back()">
+        Voltar
+    </button>
+</mat-card>

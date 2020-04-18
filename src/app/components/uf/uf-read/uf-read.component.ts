@@ -10,12 +10,12 @@ import {UfService} from "../uf.service";
 export class UfReadComponent implements OnInit {
 
   ufs : Uf[];
-  displayedColumns = ["id","name","initials","created"]
+  displayedColumns = ["id","name","initials","created","actions"]
 
   constructor(private ufService : UfService) { }
 
   ngOnInit(): void {
-    this.ufService.readList().subscribe(ufs => this.ufs = ufs)
+    this.ufService.readAll().subscribe(ufs => this.ufs = ufs)
   }
 
 }

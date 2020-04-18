@@ -9,3 +9,18 @@ table {
 button {
   margin: 10px 10px 20px 0px !important;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.msg-success {
+  background-color: #28a745;
+  color: white;
+}
+.msg-error {
+  background-color: red;
+  color: white;
+}
