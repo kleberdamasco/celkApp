@@ -21,12 +21,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import { UfReadComponent } from './components/uf/uf-read/uf-read.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { UfUpdateComponent } from './components/uf/uf-update/uf-update.component';
-import { UfDeleteComponent } from './components/uf/uf-delete/uf-delete.component';
+import {UfReadComponent} from './components/uf/uf-read/uf-read.component';
+import {MatTableModule} from '@angular/material/table';
+import {UfUpdateComponent} from './components/uf/uf-update/uf-update.component';
+import {UfDeleteComponent} from './components/uf/uf-delete/uf-delete.component';
 
 
 @NgModule({
@@ -57,8 +55,6 @@ import { UfDeleteComponent } from './components/uf/uf-delete/uf-delete.component
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
