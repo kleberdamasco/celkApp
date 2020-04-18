@@ -11,7 +11,7 @@ import {Uf} from "../uf.model";
 export class UfCreateComponent implements OnInit {
 
   uf : Uf = {
-    created: undefined, initials: "", name: ""
+    created: new Date(), initials: "", name: ""
   }
 
   constructor(private ufService : UfService, private router: Router) { }
@@ -21,7 +21,8 @@ export class UfCreateComponent implements OnInit {
 
   createUF() : void {
     this.ufService.createUF(this.uf).subscribe(() =>{
-      this.ufService.showConsole('Cadastrado com sucesso!');
+      this.ufService.showMessage('Cadastrado com sucesso!');
+      this.uf = {...this.uf, created : new Date()}
       this.back();
     })
   }

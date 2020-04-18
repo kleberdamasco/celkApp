@@ -1,14 +1,26 @@
-
-<p>works uf</p>
-
-<button mat-raised-button (click)="createUF()" color="primary">
-
-    Salvar
-
-</button>
-
-<button mat-raised-button (click)="back()">
-
-    Voltar
-
-</button>
+<mat-card>
+    <mat-card-title>Nova Unidade Federativa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="uf.name"
+                   name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Iniciais"
+                   maxlength="2" [(ngModel)]="uf.initials"
+                   name="initials">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data criação"
+                   [ngModel]="uf.created | date:'dd/MM/yyyy HH:mm:ss'"
+                   (ngModelChange)="uf.created=$event"
+                   readonly name="created">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createUF()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="back()">
+        Voltar
+    </button>
+</mat-card>

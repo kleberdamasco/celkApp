@@ -15,7 +15,7 @@ export class UfService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  showConsole(msg : string) : void {
+  showMessage(msg : string) : void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
@@ -24,8 +24,11 @@ export class UfService {
   }
 
   createUF(uf : Uf) : Observable<Uf>{
-    console.table(uf, `${this.baseURL}/create`);
     return this.http.post<Uf>(`${this.baseURL}/create`, uf);
+  }
+
+  readList() : Observable<Uf[]> {
+    return this.http.get<Uf[]>(`${this.baseURL}/all`);
   }
 
 }
