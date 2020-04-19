@@ -10,8 +10,8 @@ import {Observable} from "rxjs";
 })
 export class UfService {
 
-  baseURL : string = "http://localhost:8080/api/v1/fs";
-  // baseURL : string = "https://celkapp-backend.herokuapp.com/api/v1/fs";
+  // baseURL : string = "http://localhost:8080/api/v1/fs";
+  baseURL : string = "https://celk-app-backend.herokuapp.com/api/v1/fs";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
