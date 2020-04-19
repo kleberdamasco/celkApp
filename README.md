@@ -2,7 +2,7 @@
 
 ### Criar cadastro de unidades federativas do Brasil (estados).
 
-## A equipe de atendimento precisa informar no cadastro de cada paciente a unidade federativa. Porém, previamente, será necessário cadastrar os estados. USER STORY: Eu como administrador do sistema desejo cadastrar os estados no sistema para que esses dados sejam usados posteriormente pelos atendentes no cadastro de pacientes.
+#### A equipe de atendimento precisa informar no cadastro de cada paciente a unidade federativa. Porém, previamente, será necessário cadastrar os estados. USER STORY: Eu como administrador do sistema desejo cadastrar os estados no sistema para que esses dados sejam usados posteriormente pelos atendentes no cadastro de pacientes.
 - a. Critério de aceite 1: Cadastrar uma unidade federativa por vez com data e hora do
 registro;
 - b. Critério de aceite 2: Apresentar a lista das unidades federativas na mesma tela,
